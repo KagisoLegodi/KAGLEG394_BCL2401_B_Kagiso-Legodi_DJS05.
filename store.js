@@ -37,3 +37,7 @@ const tallyReducer = (state = 0, action) => {
             return state;
     }
 };
+
+// store instance
+
+const store = new Store(tallyReducer,0);
