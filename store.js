@@ -47,3 +47,10 @@ const store = new Store(tallyReducer,0);
 const unsubscribe = store.subscribe((newState) => {
     console.log("State updated:", newState);
 });
+
+// dispatch actions
+
+console.log("Initial state", store.getState());
+store.dispatch({ type:"ADD" });
+store.dispatch({ type:"SUBTRACT" });
+store.dispatch({ type:"RESET" })
