@@ -22,3 +22,18 @@ subscribe(listener) {
     };
 }
 }
+
+// reducer function
+
+const tallyReducer = (state = 0, action) => {
+    switch (action.type) {
+        case "ADD":
+            return state + 2;
+        case "SUBTRACT":
+            return state - 1;
+        case "RESET":
+            return 0;
+        default:
+            return state;
+    }
+};
