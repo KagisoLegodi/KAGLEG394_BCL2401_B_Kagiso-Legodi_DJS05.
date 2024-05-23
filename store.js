@@ -1,4 +1,5 @@
 // Constructor to intialize the store with a reducer and an initial state
+class Store {
 constructor(reducer, initialState) {
     this.reducer = reducer;
     this.state = initialState;
@@ -14,9 +15,10 @@ dispatch(action) {
     this.listeners.forEach(listener = listener(this.state));
 }
 
-subscribe(listener){
+subscribe(listener) {
     this.listeners.push(listener);
     return() => {
         this.listeners = this.listeners.filter(l => l !== listener);
     };
+}
 }
